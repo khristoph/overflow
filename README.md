@@ -9,7 +9,8 @@ Overflow -- A message board for people overflowing with questions.
 
 ## Tech:
 
-- Ruby on Rails
+- Sinatra
+- Ruby
 - PostgreSQL
 - Javascript / jQuery
 - AJAX
