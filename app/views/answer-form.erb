@@ -1,0 +1,8 @@
+<div class="new_answer">
+	<!-- <button id="new_comment_button" class="">New Comment</button> -->
+    <form id="answer_form" action="/answer/<%= question.id%>" name='answer-form' method="post">
+    	<label for="answer_text">Know the answer?</label><br>
+    	<textarea id="answer_text" name="answer_text"></textarea><br>
+    	<input type="submit" class="button" value="Submit Answer"></input>
+    </form>
+</div>

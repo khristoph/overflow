@@ -1,0 +1,44 @@
+<article>
+  <p>
+    <h3><%= erb :"vote-buttons", layout: false, locals: {data: question} %><span class='title'><%= question.title %></span>
+    </h3>
+    <br>
+
+    <span class='text'><%= question.question_text %></span>
+  </p>
+    <hr width="60%" align="left">
+  <div class="question-comment-container">
+      <% question.comments.each do |comment| %>
+      <%= erb :"comment", layout: false, locals: {data: comment} %>
+      <% end %>
+
+
+
+
+
+       <% if session[:user_id] %>
+       <%= erb :"comment-form-question", layout: false, locals: {question: question} %>
+       <% end %>
+
+
+   <div id="answer-holster">
+  <% question.answers.each do |answer| %>
+  <%= erb :"best-answer-button", layout: false, locals: {question: question, answer: answer} %>
+  <%= erb :"answer", layout: false, locals: {answer: answer, question: question} %>
+
+
+ <% end %>
+  </div>
+
+
+
+    <% question.answers.each do |answer| %>
+  <div class="answer-comment-container">
+    <%= erb :"answer", layout: false, locals: {answer: answer, question: question} %>
+    <% end %>
+  </div>
+
+
+<% if session[:user_id] %>
+  <%= erb :"answer-form", layout: false, locals: {question: question} %>
+<% end %>

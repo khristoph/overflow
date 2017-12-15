@@ -1,0 +1,7 @@
+<% if session[:user_id] == question.user_id %>
+
+<form method="post" action='/best/<%= answer.id %>/<%= question.id%>' class="best-answer-form inline">
+    <button type="submit" class="best-answer" name="submit_param" value="submit_value" style="float: right">☆Best Answer</button>
+</form>
+
+<% end %>

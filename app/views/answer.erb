@@ -1,0 +1,27 @@
+
+<h2><span class="answer_vote_count"><%= answer.points%></span><%= erb :"baby_answer", layout: false, locals: {answer: answer} %></h2>
+
+
+
+<%= erb :"vote-buttons", layout: false, locals: {data: answer} %>
+<hr width="60%" align="left">
+
+
+<div class='answer-comments-container-2'>
+<% answer.comments.each do |comment| %>
+<p>
+
+  <%= erb :"vote-buttons", layout: false, locals: {data: comment} %>
+  <span class="comment">
+  	<%= comment.comment_text %>
+  </span>
+  <hr width="60%" align="left">
+</p>
+<% end %>
+</div>
+
+
+
+<% if session[:user_id] %>
+<%= erb :"comment-form-answer", layout: false, locals: {question: question, answer: answer} %>
+<% end %>

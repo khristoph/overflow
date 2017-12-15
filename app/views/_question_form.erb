@@ -1,0 +1,12 @@
+<div class="question-form">
+  <h4>Submit a new question.</h4>
+<!--   need local from controller passed in for 'question' -->
+  <form action="/question" method="post">
+    <label for="title"></label>
+    <input type="text" name="title" placeholder="Enter question title.">
+    <br>
+    <textarea rows="4" cols="50" name="question_text" placeholder="Enter your dumb question here."></textarea>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+</div>

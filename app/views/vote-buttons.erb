@@ -1,0 +1,24 @@
+<% if session[:user_id] %>
+<div class="data_button_target">
+
+<form method="post" action='/vote/<%= data.class %>/<%= data.id %>/1' class="inline upvote-form">
+    <button type="submit" name="submit_param" value="submit_value" class="vote-button upvote-button">⬆️</button>
+</form>
+<% end %>
+
+<span class= "#{data}_vote_count"><%= data.points%>  </span>
+
+
+<% if session[:user_id] %>
+<form method="post" action='/vote/<%= data.class %>/<%= data.id %>/-1' class="inline downvote-form">
+    <button type="submit" name="submit_param" value="submit_value" class="vote-button downvote-button">⬇️</button>
+</form>
+
+    <% end %>
+</div>
+
+
+
+
+
+

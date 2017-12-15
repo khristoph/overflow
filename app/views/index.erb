@@ -1,0 +1,19 @@
+<body>
+	<div class='question_container'>
+
+  		<% all_questions.each do |question| %>
+
+      		<article id="<%= question.id %>">
+        		<h2><a href='/question/<%= question.id %>'><span class="question_vote_count" id="question_home"><%= question.points%></span><%= question.title %></a></h2>
+      		</article>
+  		<% end %>
+	</div>
+  <br>
+  <% if session[:user_id] %>
+    <%= erb :"_question_form" %>
+  <%end%>
+
+
+
+</body>
+
