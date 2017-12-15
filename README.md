@@ -16,7 +16,7 @@ Overflow -- A message board for people overflowing with questions.
 
 ## Developers:
 
--[Peter Haley](https://github.com/pblhaley)
--[Andrew Grzegorek](https://github.com/agrzegorek)
--[Chris Friedman](https://github.com/khristoph)
+- [Peter Haley](https://github.com/pblhaley)
+- [Andrew Grzegorek](https://github.com/agrzegorek)
+- [Chris Friedman](https://github.com/khristoph)
 
